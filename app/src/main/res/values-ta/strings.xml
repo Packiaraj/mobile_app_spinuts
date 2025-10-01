@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Spinuts</string>
+    <string name="spinuts_auth_title">Spinuts</string>
+    <string name="spinuts_auth_subtitle">தமிழ்நாட்டின் சிறந்த மசாலா, நட்ஸ் மற்றும் எண்ணெய்கள்.</string>
+    <string name="spinuts_login">உள்நுழை</string>
+    <string name="spinuts_register">பதிவு செய்ய</string>
+    <string name="spinuts_continue_guest">விருந்தினராக தொடர</string>
+    <string name="spinuts_product_missing">பொருள் கிடைக்கவில்லை</string>
+</resources>

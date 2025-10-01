@@ -1,0 +1,7 @@
+<resources>
+    <string name="spinuts_shop_title">ஷாப்</string>
+    <string name="spinuts_details">விவரம்</string>
+    <string name="spinuts_add_to_bag">கூடையில் சேர்</string>
+    <string name="spinuts_back">பின் செல்ல</string>
+    <string name="spinuts_search_placeholder">மசாலா, நட்ஸ்… தேடவும்</string>
+</resources>
