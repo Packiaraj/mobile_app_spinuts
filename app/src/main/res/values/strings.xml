@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Spinuts</string>
+    <string name="spinuts_auth_title">Spinuts</string>
+    <string name="spinuts_auth_subtitle">Premium spices, nuts &amp; oils from Tamil Nadu.</string>
+    <string name="spinuts_login">Login</string>
+    <string name="spinuts_register">Register</string>
+    <string name="spinuts_continue_guest">Continue as guest</string>
+    <string name="spinuts_product_missing">Product not found</string>
+    <string name="spinuts_back">Back</string>
+    <string name="spinuts_phone">Phone</string>
+    <string name="spinuts_password">Password</string>
+    <string name="spinuts_name">Name</string>
+    <string name="spinuts_login_title">Login to Spinuts</string>
+    <string name="spinuts_register_title">Create your Spinuts account</string>
+    <string name="spinuts_home_welcome">Welcome to Spinuts</string>
+    <string name="spinuts_home_snackbar_hint">Tap the button below to simulate adding an item to your bag. You'll see a snackbar.</string>
+    <string name="spinuts_groundnut_oil">Groundnut Oil</string>
+    <string name="spinuts_home_add_groundnut">Add Groundnut Oil to bag</string>
+    <string name="spinuts_home_browse_shop">Browse shop</string>
+    <string name="spinuts_added_to_bag">%1$s added to bag</string>
+</resources>
