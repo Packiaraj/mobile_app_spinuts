@@ -1,5 +1,6 @@
 package com.spinuts.app.nav
 
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
@@ -62,7 +63,8 @@ fun AppNavGraph() {
                     onGuest = {
                         UserSession.login()
                         navController.navigate(Routes.HOME) {
-                            popUpTo(0)
+                            popUpTo(Routes.AUTH) { inclusive = true }
+                            launchSingleTop = true
                         }
                     }
                 )
@@ -73,7 +75,8 @@ fun AppNavGraph() {
                     onLoggedIn = {
                         UserSession.login()
                         navController.navigate(Routes.HOME) {
-                            popUpTo(0)
+                            popUpTo(Routes.AUTH) { inclusive = true }
+                            launchSingleTop = true
                         }
                     }
                 )
@@ -84,7 +87,8 @@ fun AppNavGraph() {
                     onRegistered = {
                         UserSession.login()
                         navController.navigate(Routes.HOME) {
-                            popUpTo(0)
+                            popUpTo(Routes.AUTH) { inclusive = true }
+                            launchSingleTop = true
                         }
                     }
                 )
