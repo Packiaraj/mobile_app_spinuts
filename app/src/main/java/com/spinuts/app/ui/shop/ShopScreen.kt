@@ -4,8 +4,17 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
-import androidx.compose.material3.*
-import androidx.compose.runtime.*
+import androidx.compose.material3.Button
+import androidx.compose.material3.ElevatedCard
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedButton
+import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.res.stringResource
@@ -49,12 +58,13 @@ fun ShopScreen(
             modifier = Modifier.fillMaxSize()
         ) {
             items(items, key = { it.id }) { p ->
+                val name = localizedName(p)
+                val addMessage = stringResource(R.string.spinuts_added_to_bag, name)
                 ProductRow(
                     product = p,
+                    displayName = name,
                     onDetail = { onOpenDetail(p.id) },
-                    onAdd = {
-                        cartVm.addToCart(localizedName(p))
-                    }
+                    onAdd = { cartVm.addToCart(addMessage) }
                 )
             }
         }
@@ -64,6 +74,7 @@ fun ShopScreen(
 @Composable
 private fun ProductRow(
     product: Product,
+    displayName: String,
     onDetail: () -> Unit,
     onAdd: () -> Unit
 ) {
@@ -73,10 +84,24 @@ private fun ProductRow(
         Column(Modifier.padding(12.dp)) {
             Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
                 Column(Modifier.weight(1f).clickable { onDetail() }) {
-                    Text(localizedName(product), fontWeight = FontWeight.Medium)
-                    Text("${product.unit} • ${product.category}", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.secondary)
+                    Text(displayName, fontWeight = FontWeight.Medium)
+                    Text(
+                        text = stringResource(
+                            R.string.spinuts_product_meta,
+                            product.unit,
+                            product.category
+                        ),
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.secondary
+                    )
                 }
-                Text("₹${"%.2f".format(product.price)}", fontWeight = FontWeight.SemiBold)
+                Text(
+                    text = stringResource(
+                        R.string.spinuts_price_format,
+                        product.price
+                    ),
+                    fontWeight = FontWeight.SemiBold
+                )
             }
             Spacer(Modifier.height(8.dp))
             Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {

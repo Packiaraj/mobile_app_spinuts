@@ -4,12 +4,15 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.material3.Button
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.dp
+import com.spinuts.app.R
 
 @Composable
 fun LoginScreen(
@@ -20,19 +23,23 @@ fun LoginScreen(
     val password = remember { mutableStateOf("") }
 
     Column(Modifier.fillMaxSize().padding(24.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
-        Text("Login to Spinuts")
-        OutlinedTextField(value = phone.value, onValueChange = { phone.value = it }, label = { Text("Phone") })
+        Text(stringResource(id = R.string.spinuts_login_title))
+        OutlinedTextField(
+            value = phone.value,
+            onValueChange = { phone.value = it },
+            label = { Text(stringResource(id = R.string.spinuts_phone)) }
+        )
         OutlinedTextField(
             value = password.value,
             onValueChange = { password.value = it },
-            label = { Text("Password") },
+            label = { Text(stringResource(id = R.string.spinuts_password)) },
             visualTransformation = PasswordVisualTransformation()
         )
         Button(onClick = onLoggedIn, enabled = phone.value.isNotBlank() && password.value.isNotBlank()) {
-            Text("Login")
+            Text(stringResource(id = R.string.spinuts_login))
         }
-        Button(onClick = onBack) {
-            Text("Back")
+        TextButton(onClick = onBack) {
+            Text(stringResource(id = R.string.spinuts_back))
         }
     }
 }

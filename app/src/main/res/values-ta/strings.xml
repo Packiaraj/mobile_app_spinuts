@@ -6,4 +6,16 @@
     <string name="spinuts_register">பதிவு செய்ய</string>
     <string name="spinuts_continue_guest">விருந்தினராக தொடர</string>
     <string name="spinuts_product_missing">பொருள் கிடைக்கவில்லை</string>
+    <string name="spinuts_back">பின் செல்ல</string>
+    <string name="spinuts_phone">தொலைபேசி</string>
+    <string name="spinuts_password">கடவுச்சொல்</string>
+    <string name="spinuts_name">பெயர்</string>
+    <string name="spinuts_login_title">Spinuts-இல் உள்நுழைக</string>
+    <string name="spinuts_register_title">உங்கள் Spinuts கணக்கை உருவாக்கவும்</string>
+    <string name="spinuts_home_welcome">Spinuts-க்கு வரவேற்பு</string>
+    <string name="spinuts_home_snackbar_hint">கூடையில் பொருளைச் சேர்ப்பதை முயற்சி செய்ய கீழே உள்ள பொத்தானைத் தட்டவும். Snackbar-ஐ காணலாம்.</string>
+    <string name="spinuts_groundnut_oil">நடக்கடலை எண்ணெய்</string>
+    <string name="spinuts_home_add_groundnut">நடக்கடலை எண்ணெயை கூடையில் சேர்</string>
+    <string name="spinuts_home_browse_shop">ஷாப்பை உலாவவும்</string>
+    <string name="spinuts_added_to_bag">%1$s கூடையில் சேர்க்கப்பட்டது</string>
 </resources>

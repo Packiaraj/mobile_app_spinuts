@@ -2,6 +2,7 @@
     <string name="spinuts_shop_title">Shop</string>
     <string name="spinuts_details">Details</string>
     <string name="spinuts_add_to_bag">Add to bag</string>
-    <string name="spinuts_back">Back</string>
     <string name="spinuts_search_placeholder">Search spices, nuts…</string>
+    <string name="spinuts_product_meta">%1$s • %2$s</string>
+    <string name="spinuts_price_format">₹%1$.2f</string>
 </resources>

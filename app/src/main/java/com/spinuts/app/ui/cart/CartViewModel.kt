@@ -11,9 +11,9 @@ class CartViewModel : ViewModel() {
     private val _events = MutableSharedFlow<UiEvent>()
     val events = _events.asSharedFlow()
 
-    fun addToCart(item: String) {
+    fun addToCart(message: String) {
         viewModelScope.launch {
-            _events.emit(UiEvent.ShowSnackbar("$item added to bag"))
+            _events.emit(UiEvent.ShowSnackbar(message))
         }
     }
 }
